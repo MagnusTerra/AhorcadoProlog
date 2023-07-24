@@ -1,5 +1,3 @@
-/* this file handles the lifes of the user and the output of the hangman */
-
 hang_the_man:-
     hangman(X),
     hangman_progress(X).
