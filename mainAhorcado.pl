@@ -1,10 +1,11 @@
 :-style_check(-singleton).
 :- consult('inputVal.pl').
 :- consult('ahorcado.pl').
+:- consult('game.pl').
 
 %schwiergekeit %grad
-category(animales, [gato, perro, cocodrilo, raton, leon, tigre, aguila, puercoespín, vaca]).
-category(frutas, [piña, banana, manzana, fresa, cereza, durazno]).
+category(animales, [gato, perro, cocodrilo, raton, leon, tigre, aguila, puercoespin, vaca]).
+category(frutas, [freza, banana, manzana, fresa, cereza, durazno]).
 category(ciudades, [cologne, berlin, duesseldorf, bonn, tangier, tokyo, seoul]).
 category(profecional, [actitud, prolog, interdisciplinario, inconsecuente]).
 

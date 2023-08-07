@@ -1,0 +1,37 @@
+Este código implementa un juego de adivinanza en Prolog donde el programa intenta adivinar en qué animal estás pensando haciendo 
+una serie de preguntas binarias (sí o no) y actualizando su conocimiento en base a tus respuestas. A medida que el juego progresa,
+ el programa aprende nuevas preguntas y animales.
+
+Aquí tienes una explicación detallada de las principales partes del código:
+
+Declaraciones de predicados dinámicos:
+
+tree_y/2, tree_n/2: Representan las ramas "sí" y "no" de un árbol de preguntas.
+guess_y/2, guess_n/2: Representan las conjeturas (animales) y las preguntas asociadas a ellas.
+try_guessing/2:
+
+Este predicado interactúa con el usuario para hacer preguntas y seguir el flujo del árbol de preguntas.
+Imprime la pregunta actual y espera una respuesta "si" o "no" del usuario.
+Basándose en la respuesta, avanza en la estructura de árbol almacenada en tree_y/2 o tree_n/2 y continúa preguntando.
+Si llega a una hoja del árbol (es decir, una conjetura), utiliza guess_y/2 o guess_n/2 para hacer una conjetura y llama a 
+check_guess/2 para verificar si es correcta.
+check_guess/2:
+
+Imprime su conjetura y espera que el usuario confirme si es correcta o no.
+Actualiza su base de conocimientos en función de la respuesta del usuario.
+update_animals/1:
+
+Si el programa adivina incorrectamente, solicita al usuario información sobre el nuevo animal y la pregunta que permitiría 
+adivinarlo.
+Actualiza la base de conocimientos con la nueva pregunta y las relaciones entre conjeturas y preguntas.
+update/0:
+
+Este predicado actualiza un archivo de texto llamado "animals.txt" con el contenido actualizado de la base de conocimientos.
+play/0:
+
+Inicia el juego y proporciona instrucciones al usuario.
+Utiliza el predicado try_guessing/2 para llevar a cabo la secuencia de preguntas y conjeturas.
+Si adivina correctamente, felicita al usuario. Si no, aprende y actualiza la base de conocimientos.
+El juego funciona siguiendo este flujo de interacciones, haciendo conjeturas y aprendiendo de las respuestas del usuario. 
+Puede ser una forma interesante de ver cómo un programa en Prolog puede aprender y adaptarse a la información proporcionada por 
+el usuario.

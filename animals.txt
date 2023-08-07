@@ -1,0 +1,47 @@
+start_pos("¿Es su animal un mam�\u00ADfero?").
+
+:- dynamic tree_y/2.
+
+tree_y("¿Es su animal un mam�\u00ADfero?", "¿Tiene rayas?").
+tree_y("¿Es un pájaro?", "¿Vuela?").
+tree_y("¿Su animal es acuático?", "¿Es su animal un animal grande?").
+tree_y("¿Vuela?", "¿Es un animal salvaje?").
+tree_y("¿Su animal es un reptil?", "¿Su animal tiene patas?").
+tree_y("¿Es un roedor?", "¿Su animal vive cerca del agua?").
+tree_y("¿Su animal es herb�\u00ADvoro?", "¿Es su animal un marsupial?").
+
+:- dynamic tree_n/2.
+
+tree_n("¿Es su animal un mam�\u00ADfero?", "¿Es un pájaro?").
+tree_n("¿Tiene rayas?", "¿Su animal es acuático?").
+tree_n("¿Su animal es acuático?", "¿Es su animal una mascota?").
+tree_n("¿Es un pájaro?", "¿Su animal es un reptil?").
+tree_n("¿Es su animal una mascota?", "¿Es un roedor?").
+tree_n("¿Es conocido como el mejor amigo del hombre?", "¿Es un roedor?").
+tree_n("¿Es un roedor?", "¿Es habitual ver ese animal en las granjas?").
+tree_n("¿Su animal es un reptil?", "¿Su animal es acuático?").
+tree_n("¿Es habitual ver ese animal en las granjas?", "¿Su animal es herb�\u00ADvoro?").
+
+:- dynamic guess_y/2.
+
+guess_y("¿Tiene rayas?", "Cebra").
+guess_y("¿Es su animal una mascota?", "Perro").
+guess_y("¿Su animal es grande?", "Ballena").
+guess_y("¿Es un animal salvaje?", "Loro").
+guess_y("¿Es habitual ver ese animal en las granjas?", "Cerdo").
+guess_y("¿Su animal tiene patas?", "Cocodrilo").
+guess_y("¿Su animal vive cerca del agua?", "Capibara").
+guess_y("¿Su animal es acuático?", "Tiburón").
+guess_y("¿Es su animal un marsupial?", "Koala").
+
+:- dynamic guess_n/2.
+
+guess_n("¿Vuela?", "Gallina").
+guess_n("¿Es su animal un animal grande?", "Delf�\u00ADn").
+guess_n("¿Es un animal salvaje?", "Paloma").
+guess_n("¿Su animal tiene patas?", "Serpiente").
+guess_n("¿Su animal vive cerca del agua?", "Ardilla").
+guess_n("¿Su animal es acuático?", "Rana").
+guess_n("¿Su animal es herb�\u00ADvoro?", "León").
+guess_n("¿Es su animal un marsupial?", "Panda").
+
